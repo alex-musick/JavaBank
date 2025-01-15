@@ -11,11 +11,12 @@ public class program
         {
             System.out.println("====Menu====");
             System.out.println("1. Select Profile");
-            System.out.println("2. Check Balance");
-            System.out.println("3. Deposit");
-            System.out.println("4. Withdraw");
-            System.out.println("5. Make an account");
-            System.out.println("6. Exit");
+            System.out.println("2. Print Account Information");
+            System.out.println("3. Check Balance");
+            System.out.println("4. Deposit");
+            System.out.println("5. Withdraw");
+            System.out.println("6. Make an account");
+            System.out.println("7. Exit");
             System.out.println("Please enter a number: ");
 
             choice = scan.nextInt();
@@ -23,26 +24,29 @@ public class program
             switch(choice)
             {
                 case 1:
-                    System.out.println("Account Name: ");
+                    System.out.println("Routing Number: ");
                     break;
 
                 case 2:
+                    System.out.println("Account info: ");
+
+                case 3:
                     System.out.println("Check Balance: ");
                     break;
 
-                case 3: 
+                case 4: 
                     System.out.println("Depost: ");
                     break;
 
-                case 4:
+                case 5:
                     System.out.println("Withdraw: ");
                     break;
 
-                case 5:
+                case 6:
                     System.out.println("Make an Account: ");
                     break;
 
-                case 6:
+                case 7:
                     System.out.println("Exiting the bank, thank you!");
                     break;
 
