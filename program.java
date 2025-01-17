@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class program 
@@ -5,6 +6,7 @@ public class program
     public static void main(String[] args)
     {
         Scanner scan = new Scanner(System.in);
+        Random rand = new Random();
         int choice;
 
         do 
@@ -17,7 +19,7 @@ public class program
             System.out.println("5. Withdraw");
             System.out.println("6. Make an account");
             System.out.println("7. Exit");
-            System.out.println("Please enter a number: ");
+            System.out.print("Please enter a number: ");
 
             choice = scan.nextInt();
 
@@ -43,7 +45,12 @@ public class program
                     break;
 
                 case 6:
-                    System.out.println("Make an Account: ");
+                    System.out.println("Make an Account");
+                    System.out.println("Enter your name: ");
+                    String name = scan.nextLine();
+                    int routing_number = rand.nextInt(10000001);
+                    Account account = new Account(name, routing_number, 0.00, 0.00);
+                    account.display();
                     break;
 
                 case 7:
