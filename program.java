@@ -1,5 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
+import java.util.HashMap;
 
 public class program 
 {
@@ -8,10 +9,18 @@ public class program
         Scanner scan = new Scanner(System.in);
         Random rand = new Random();
         int choice;
+        HashMap<Integer, Account> accounts = new HashMap<>();
+        // double checking_balance = 0.00;
+        // double saving_balance = 0.00;
+        // String name;
 
         do 
         {
-            System.out.println("====Menu====");
+            double checking_balance = 0.00;
+            double saving_balance = 0.00;
+            String name;
+
+            System.out.println("=======Menu=======");
             System.out.println("1. Select Profile");
             System.out.println("2. Print Account Information");
             System.out.println("3. Check Balance");
@@ -22,6 +31,7 @@ public class program
             System.out.print("Please enter a number: ");
 
             choice = scan.nextInt();
+            scan.nextLine();
 
             switch(choice)
             {
@@ -45,12 +55,8 @@ public class program
                     break;
 
                 case 6:
-                    System.out.println("Make an Account");
-                    System.out.println("Enter your name: ");
-                    String name = scan.nextLine();
-                    int routing_number = rand.nextInt(10000001);
-                    Account account = new Account(name, routing_number, 0.00, 0.00);
-                    account.display();
+                    Account new_account = new Account();
+                    accounts.put(new_account.get_routing_number(), new_account);
                     break;
 
                 case 7:
