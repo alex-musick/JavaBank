@@ -3,11 +3,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class Saving {
+public class saving {
     private double balance;
 
     // Constructor to initialize a savings account with a balance
-    public Saving(double initialBalance) {
+    public saving(double initialBalance) {
         if (initialBalance >= 0) {
             this.balance = initialBalance;
         } else {
