@@ -1,4 +1,4 @@
-import java.util.Random;
+import java.util.HashMap;
 import java.util.Scanner;
 import java.util.HashMap;
 
@@ -6,8 +6,8 @@ public class program
 {
     public static void main(String[] args)
     {
+        HashMap<Integer, Account> accounts = new HashMap<>();
         Scanner scan = new Scanner(System.in);
-        Random rand = new Random();
         int choice;
         HashMap<Integer, Account> accounts = new HashMap<>();
         // double checking_balance = 0.00;
