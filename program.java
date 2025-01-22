@@ -17,7 +17,7 @@ public class program
         do 
         {
             //double checking_balance = 0.00;
-            //double saving_balance = 0.00;f
+            //double saving_balance = 0.00;
            //String name;
 
             System.out.println("=======Menu=======");
