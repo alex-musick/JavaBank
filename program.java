@@ -8,7 +8,6 @@ public class program
         HashMap<Integer, Account> accounts = new HashMap<>();
         Scanner scan = new Scanner(System.in);
         int choice;
-        HashMap<Integer, Account> accounts = new HashMap<>();
         // double checking_balance = 0.00;
         // double saving_balance = 0.00;
         // String name;
@@ -35,11 +34,16 @@ public class program
             switch(choice)
             {
                 case 1:
+                    System.out.println(accounts);
                     System.out.println("Routing Number: ");
+                    int selected_routing_number = scan.nextInt();
+                    System.out.println("Account: " + accounts.get(selected_routing_number));
+
                     break;
 
                 case 2:
                     System.out.println("Account info: ");
+
 
                 case 3:
                     System.out.println("Check Balance: ");
@@ -67,7 +71,7 @@ public class program
                     choice = scan.nextInt();
             }
 
-        } while(choice != 6);
+        } while(choice != 7);
         
         scan.close();
     }
