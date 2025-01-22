@@ -69,6 +69,9 @@ public class program
 
                 case 5:
                     System.out.println("Withdraw: ");
+                    System.out.println("Enter the amount you would like to withdraw: ");
+                    double withdraw_amount = scan.nextDouble();
+                    checkingAccount.withdraw(withdraw_amount);
                     break;
 
                 case 6:
