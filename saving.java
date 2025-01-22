@@ -16,7 +16,7 @@ public class saving {
         }
     }
 
-    // Method to get the current balanc
+    // Method to get the current balance
     public double getBalance() {
         return balance;
     }
