@@ -17,7 +17,7 @@ public class program
         do 
         {
             //double checking_balance = 0.00;
-            //double saving_balance = 0.00;
+            //double saving_balance = 0.00;f
            //String name;
 
             System.out.println("=======Menu=======");
@@ -39,7 +39,7 @@ public class program
                     System.out.println(accounts);
                     System.out.println("Routing Number: ");
                     int selected_routing_number = scan.nextInt();
-                    System.out.println("Account:" + accounts.get(selected_routing_number));
+                    System.out.println("Account: " + accounts.get(selected_routing_number));
 
                     break;
 
