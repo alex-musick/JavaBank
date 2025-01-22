@@ -8,15 +8,17 @@ public class program
         HashMap<Integer, Account> accounts = new HashMap<>();
         Scanner scan = new Scanner(System.in);
         int choice;
-        // double checking_balance = 0.00;
+        double checking_balance = 0.00;
         // double saving_balance = 0.00;
         // String name;
 
+        CheckingAccount checkingAccount = new CheckingAccount(checking_balance);
+
         do 
         {
-            double checking_balance = 0.00;
-            double saving_balance = 0.00;
-            String name;
+            //double checking_balance = 0.00;
+            //double saving_balance = 0.00;
+           //String name;
 
             System.out.println("=======Menu=======");
             System.out.println("1. Select Profile");
@@ -50,7 +52,18 @@ public class program
                     break;
 
                 case 4: 
-                    System.out.println("Depost: ");
+                    System.out.println("Deposit: ");
+                    System.out.println("Which account do you want to deposit to?");
+                    System.out.println("1. Checking\n 2. Saving?");
+
+                    int account_choice = scan.nextInt();
+
+                    if (account_choice == 1)
+                    {
+                        System.out.println("Please enter the amount: ");
+                        double amount = scan.nextDouble();
+                        checkingAccount.deposit(amount);
+                    }
                     break;
 
                 case 5:
