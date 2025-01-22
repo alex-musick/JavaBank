@@ -5,6 +5,7 @@ public class program
 {
     public static void main(String[] args)
     {
+        Account selected_account = new Account("No account selected");
         HashMap<Integer, Account> accounts = new HashMap<>();
         Scanner scan = new Scanner(System.in);
         int choice;
@@ -12,12 +13,12 @@ public class program
         // double saving_balance = 0.00;
         // String name;
 
-        CheckingAccount checkingAccount = new CheckingAccount(checking_balance);
+        // CheckingAccount checkingAccount = new CheckingAccount(checking_balance);
 
         do 
         {
             double checking_balance = 0.00;
-            double saving_balance = 0.00;f
+            double saving_balance = 0.00;
             String name;
 
             System.out.println("=======Menu=======");
@@ -52,19 +53,19 @@ public class program
                     break;
 
                 case 4: 
-                    System.out.println("Deposit: ");
-                    System.out.println("Which account do you want to deposit to?");
-                    System.out.println("1. Checking\n 2. Saving?");
+                    // System.out.println("Deposit: ");
+                    // System.out.println("Which account do you want to deposit to?");
+                    // System.out.println("1. Checking\n 2. Saving?");
 
-                    int account_choice = scan.nextInt();
+                    // int account_choice = scan.nextInt();
 
-                    if (account_choice == 1)
-                    {
-                        System.out.println("Please enter the amount: ");
-                        double amount = scan.nextDouble();
-                        checkingAccount.deposit(amount);
-                    }
-                    break;
+                    // if (account_choice == 1)
+                    // {
+                    //     System.out.println("Please enter the amount: ");
+                    //     double amount = scan.nextDouble();
+                    //     checkingAccount.deposit(amount);
+                    // }
+                    // break;
 
                 case 5:
                     System.out.println("Withdraw: ");
