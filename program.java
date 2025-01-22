@@ -8,6 +8,7 @@ public class program
         HashMap<Integer, Account> accounts = new HashMap<>();
         Scanner scan = new Scanner(System.in);
         int choice;
+        Account selected_account = new Account("No account selected");
         // double checking_balance = 0.00;
         // double saving_balance = 0.00;
         // String name;
@@ -15,7 +16,7 @@ public class program
         do 
         {
             double checking_balance = 0.00;
-            double saving_balance = 0.00;f
+            double saving_balance = 0.00;
             String name;
 
             System.out.println("=======Menu=======");
@@ -37,15 +38,12 @@ public class program
                     System.out.println(accounts);
                     System.out.println("Routing Number: ");
                     int selected_routing_number = scan.nextInt();
-                    // System.out.println("Account: " + accounts.get(selected_routing_number));
-                    Account selected_account = new Account();
-                    // System.out.println(accounts.get(selected_routing_number.get_name()));
-
+                    selected_account = accounts.get(selected_routing_number);
                     break;
 
                 case 2:
                     System.out.println("Account info: ");
-                    // System.out.println(selected_account.get_name());
+                    System.out.println(selected_account.get_name());
                     break;
 
                 case 3:

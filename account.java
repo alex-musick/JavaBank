@@ -30,6 +30,13 @@ class Account {
 
         // scan.close();
     }
+
+    public Account(String name)
+    {
+        this.name = name;
+        this.routing_number = rand.nextInt(10000001);
+    }
+
     public Account(String name, int routing_number)
     {
         this.name = name;
