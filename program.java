@@ -29,7 +29,7 @@ public class program
             System.out.print("Please enter a number: ");
 
             choice = scan.nextInt();
-            scan.nextLine();
+            // scan.nextLine();
 
             switch(choice)
             {
@@ -37,13 +37,16 @@ public class program
                     System.out.println(accounts);
                     System.out.println("Routing Number: ");
                     int selected_routing_number = scan.nextInt();
-                    System.out.println("Account: " + accounts.get(selected_routing_number));
+                    // System.out.println("Account: " + accounts.get(selected_routing_number));
+                    Account selected_account = new Account();
+                    // System.out.println(accounts.get(selected_routing_number.get_name()));
 
                     break;
 
                 case 2:
                     System.out.println("Account info: ");
-
+                    // System.out.println(selected_account.get_name());
+                    break;
 
                 case 3:
                     System.out.println("Check Balance: ");
@@ -60,6 +63,7 @@ public class program
                 case 6:
                     Account new_account = new Account();
                     accounts.put(new_account.get_routing_number(), new_account);
+                    System.out.println(new_account.get_name());
                     break;
 
                 case 7:

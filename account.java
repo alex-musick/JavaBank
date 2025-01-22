@@ -4,6 +4,8 @@ import java.util.Scanner;
 class Account {
 
     private static Random rand = new Random();
+    Scanner scan = new Scanner(System.in);
+
 
     private String name;
     private int routing_number;
@@ -22,13 +24,16 @@ class Account {
 
     public Account()
     {
-        Scanner scan = new Scanner(System.in);
-
         System.out.println("Enter your name: ");
         this.name = scan.nextLine();
         this.routing_number = rand.nextInt(10000001);
 
-        scan.close();
+        // scan.close();
+    }
+    public Account(String name, int routing_number)
+    {
+        this.name = name;
+        this.routing_number = routing_number;
     }
 
     public void print_account()
