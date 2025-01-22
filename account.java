@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Account {
+class Account {
 
     private static Random rand = new Random();
 

@@ -1,4 +1,4 @@
-public class checking {
+class checking {
     private double balance;
 
     // Constructor to initialize a checking account with a balance
