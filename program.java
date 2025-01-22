@@ -13,7 +13,8 @@ public class program
         // double saving_balance = 0.00;
         // String name;
 
-        // CheckingAccount checkingAccount = new CheckingAccount(checking_balance);
+        
+        CheckingAccount checkingAccount = new CheckingAccount(0.00); // Initialize with a starting balance of 0.00
 
         do 
         {
@@ -53,26 +54,26 @@ public class program
                     break;
 
                 case 4: 
-                    // System.out.println("Deposit: ");
-                    // System.out.println("Which account do you want to deposit to?");
-                    // System.out.println("1. Checking\n 2. Saving?");
+                    System.out.println("Deposit: ");
+                    System.out.println("Which account do you want to deposit to?");
+                    System.out.println("1. Checking\n 2. Saving?");
 
-                    // int account_choice = scan.nextInt();
+                    int account_choice = scan.nextInt();
 
-                    // if (account_choice == 1)
-                    // {
-                    //     System.out.println("Please enter the amount: ");
-                    //     double amount = scan.nextDouble();
-                    //     checkingAccount.deposit(amount);
-                    // }
-                    // break;
+                    if (account_choice == 1)
+                    {
+                         System.out.println("Please enter the amount: ");
+                         double amount = scan.nextDouble();
+                         checkingAccount.deposit(amount);
+                     }
+                     break;
 
                 case 5:
-                    System.out.println("Withdraw: ");
-                    System.out.println("Enter the amount you would like to withdraw: ");
-                    double withdraw_amount = scan.nextDouble();
-                    checkingAccount.withdraw(withdraw_amount);
-                    break;
+                System.out.println("Withdraw: ");
+                System.out.println("Enter the amount you would like to withdraw: ");
+                double withdraw_amount = scan.nextDouble();
+                checkingAccount.withdraw(withdraw_amount); // Error occurs here
+                break;
 
                 case 6:
                     Account new_account = new Account();
