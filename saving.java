@@ -22,7 +22,7 @@ public class saving {
     }
 
     // Method to deposit money into the account
-    public void deposit(double amount) {
+    public double deposit(double amount, double balance) {
         if (amount > 0) {
             balance += amount;
             out.println("Deposited: $" + amount);
@@ -31,10 +31,11 @@ public class saving {
         } else {
             out.println("Deposit amount must be positive.");
         }
+        return balance;
     }
 
     // Method to withdraw money from the account
-    public void withdraw(double amount) {
+    public double withdraw(double amount, double balance) {
         if (amount > 0) {
             if (amount <= balance) {
                 balance -= amount;
@@ -47,6 +48,7 @@ public class saving {
         } else {
             out.println("Withdrawal amount must be positive.");
         }
+        return balance;
     }
 
     // Method to update the transaction history

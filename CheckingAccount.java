@@ -13,7 +13,7 @@ public class CheckingAccount {
         return balance;
     }
 
-    public void deposit(double amount) {
+    public double deposit(double amount, double balance) {
         if (amount > 0) {
             balance += amount;
             out.println("Deposited: " + amount);
@@ -22,9 +22,10 @@ public class CheckingAccount {
         } else {
             out.println("Deposit amount must be positive.");
         }
+        return balance;
     }
 
-    public void withdraw(double amount) {
+    public double withdraw(double amount, double balance) {
         if (amount > 0 && amount <= balance) {
             balance -= amount;
             out.println("Withdrew: " + amount);
@@ -35,6 +36,7 @@ public class CheckingAccount {
         } else {
             out.println("Withdrawal amount must be positive.");
         }
+        return balance;
     }
 
     public void UpdateHistory(String TransactionType, double amount, double balance) {
