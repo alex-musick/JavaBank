@@ -26,7 +26,7 @@ class Account {
     {
         System.out.println("Enter your name: ");
         this.name = scan.nextLine();
-        this.routing_number = rand.nextInt(10000001);
+        this.routing_number = 100000 + rand.nextInt(900000);
 
         // scan.close();
     }
@@ -34,7 +34,7 @@ class Account {
     public Account(String name)
     {
         this.name = name;
-        this.routing_number = rand.nextInt(10000001);
+        this.routing_number = 100000 + rand.nextInt(900000);
     }
 
     public Account(String name, int routing_number)

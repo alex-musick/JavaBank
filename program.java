@@ -87,7 +87,7 @@ public class program
                         System.out.println("Enter the amount you would like to withdraw: ");
                         double withdraw_amount = scan.nextDouble();
                         double balance = selected_account.get_checking_balance();
-                        balance = checkingAccount.withdraw(withdraw_amount, balance); // Error occurs here
+                        balance = checkingAccount.withdraw(withdraw_amount, balance);
                         selected_account.set_checking_balance(balance);
                     }
                     else if (decision == 2) 
