@@ -34,8 +34,8 @@ public class program
             switch(choice)
             {
                 case 1:
-                    System.out.println(accounts);
-                    System.out.println("Routing Number: ");
+                    accounts.forEach((key, value) -> System.out.println("Routing Number: " + key + ", Name: " + value.get_name()));
+                    System.out.println("Enter Routing Number: ");
                     int selected_routing_number = scan.nextInt();
                     selected_account = accounts.get(selected_routing_number);
                     break;
