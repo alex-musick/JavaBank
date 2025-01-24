@@ -81,29 +81,29 @@ public class program
                      break;
 
                 case 5:
-                System.out.println("What account would you like to withdraw from? ");
-                System.out.println("1. Checking account");
-                System.out.println("2. Savings account");
-                int decision = scan.nextInt();
-                if (decision == 1)
-                {
-                    System.out.println("Withdraw: ");
-                    System.out.println("Enter the amount you would like to withdraw: ");
-                    double withdraw_amount = scan.nextDouble();
-                    double balance = selected_account.get_checking_balance();
-                    balance = checkingAccount.withdraw(withdraw_amount, balance); // Error occurs here
-                    selected_account.set_checking_balance(balance);
-                }
-                else if (decision == 2) 
-                {
-                    System.out.println("Withdraw: ");
-                    System.out.println("Enter the amount you would like to withdraw: ");
-                    double withdraw_amount = scan.nextDouble();
-                    double balance = selected_account.get_saving_balance();
-                    balance = savingAccount.withdraw(withdraw_amount, balance); // Error occurs here
-                    selected_account.set_saving_balance(balance);
-                }
-                break;
+                    System.out.println("What account would you like to withdraw from? ");
+                    System.out.println("1. Checking account");
+                    System.out.println("2. Savings account");
+                    int decision = scan.nextInt();
+                    if (decision == 1)
+                    {
+                        System.out.println("Withdraw: ");
+                        System.out.println("Enter the amount you would like to withdraw: ");
+                        double withdraw_amount = scan.nextDouble();
+                        double balance = selected_account.get_checking_balance();
+                        balance = checkingAccount.withdraw(withdraw_amount, balance); // Error occurs here
+                        selected_account.set_checking_balance(balance);
+                    }
+                    else if (decision == 2) 
+                    {
+                        System.out.println("Withdraw: ");
+                        System.out.println("Enter the amount you would like to withdraw: ");
+                        double withdraw_amount = scan.nextDouble();
+                        double balance = selected_account.get_saving_balance();
+                        balance = savingAccount.withdraw(withdraw_amount, balance); // Error occurs here
+                        selected_account.set_saving_balance(balance);
+                    }
+                    break;
 
                 case 6:
                     Account new_account = new Account();
