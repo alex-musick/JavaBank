@@ -42,10 +42,6 @@ public class program
 
                 case 2:
                     System.out.println("Account info: ");
-                    // System.out.println(selected_account.get_name());
-                    // System.out.println(selected_account.get_routing_number());
-                    // System.out.println(selected_account.get_checking_balance());
-                    // System.out.println(selected_account.get_saving_balance());
                     selected_account.print_account();
                     break;
 
